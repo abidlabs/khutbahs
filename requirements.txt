@@ -1,0 +1,5 @@
+pytube
+pydub
+ffmpeg-python
+openai-whisper
+tqdm
