@@ -23,4 +23,5 @@ def download_audio_from_youtube(video_url):
 with open(URLS_FILE) as f:
     urls = f.readlines()
     for url in urls:
+        print(f"Downloading: {url}")
         download_audio_from_youtube(url)

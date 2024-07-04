@@ -60,7 +60,7 @@ for transcript_file in os.listdir(RAW_TRANSCRIPTS_DIR):
     if transcript_file.endswith(".txt"):
         print("Cleaning: ", transcript_file)
         clean_transcript_file = Path(CLEAN_TRANSCRIPTS_DIR) / (Path(transcript_file).with_suffix('').name + ".md")
-        if 1 or not Path(clean_transcript_file).exists():
+        if not Path(clean_transcript_file).exists():
             clean = clean_transcript(RAW_TRANSCRIPTS_DIR + "/" + transcript_file)
             with open(clean_transcript_file, "w") as f:
                 f.write(clean)
